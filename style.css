@@ -4,32 +4,33 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --text-color: white;
   --bg-url: url(Imagens/bg-mobile.jpg);
-  --stroke-color:rgba(255, 255, 255, 0.5);
-  --surface-color: rgba(255, 255, 255, 0.10);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(0, 0, 0, 0.05);
-  --highlight-color: rgba(255, 255, 255, 0.20);
+  --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(Imagens/MoonStars.svg);
 }
 
 .light {
   --text-color: black;
   --bg-url: url(Imagens/bg-mobile-light.jpg);
-  --stroke-color:rgba(0, 0, 0, 0.5 );
+  --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --highlight-color: rgba(0, 0, 0, 0.10);
+  --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(Imagens/Sun.svg);
 }
 
 body {
-  background: var(--bg-url)  no-repeat top center / cover;
+  background: var(--bg-url) no-repeat top center / cover;
+  height: 100vh;
 }
 
 body * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 
@@ -100,7 +101,7 @@ body * {
 
 /* links */
 
-ul {	
+ul {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -125,8 +126,6 @@ ul li a {
   font-weight: 500;
 
   transition: background 0.2s;
-
-
 }
 
 ul li a:hover {
@@ -134,17 +133,16 @@ ul li a:hover {
   border: 1.5px solid var(--text-color);
 }
 
-#social-links{
+#social-links {
   display: flex;
   justify-content: center;
 
   padding: 24px 0;
 
   font-size: 24px;
-  
 }
 
-#social-links a{
+#social-links a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,28 +152,24 @@ ul li a:hover {
   transition: background 0.2s;
 }
 
-#social-links a:hover{
-  background: var(--highlight-color)
+#social-links a:hover {
+  background: var(--highlight-color);
 }
 
-footer{
+footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
 }
 
+/* media queries */
 
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(Imagens/bg-desktop.jpg);
+  }
 
-
-
-
-
-
-
-
-/*Observações:
-
-Div é um elemento block.
-Img é um elemento in line
-
-* Elementos in line não pode ser aplicado margin para centralização.
+  .light {
+    --bg-url: url(Imagens/bg-desktop-light.jpg);
+  }
+}
